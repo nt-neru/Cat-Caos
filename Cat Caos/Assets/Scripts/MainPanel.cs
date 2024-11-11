@@ -51,6 +51,10 @@ public class MainPanel : MonoBehaviour
     {
         SceneManager.LoadScene(level);
     }
+    public void Multiplayer(string level)
+    {
+        SceneManager.LoadScene(level);
+    }
     public void ExitGame()
     {
         Application.Quit();
