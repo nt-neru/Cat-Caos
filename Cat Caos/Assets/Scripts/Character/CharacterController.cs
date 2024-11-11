@@ -17,7 +17,7 @@ public class PlayerController : NetworkBehaviour
 
     void Start()
     {
-        // Lock cursor
+      
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
