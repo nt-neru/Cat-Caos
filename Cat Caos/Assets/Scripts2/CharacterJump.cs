@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterJump : MonoBehaviour
+public class CharacterJump : Character, IJumpable
 {
     /* Fields */
-    private Rigidbody2D rb;
     private bool doubleJumpUsed = false;
 
     /* Serialized Fields */
@@ -15,25 +14,20 @@ public class CharacterJump : MonoBehaviour
     [SerializeField] private Transform groundCheck;
 
     [Header("Settings")]
-    [SerializeField] private float fuerzaSalto;
-	[SerializeField] private float doubleJumpForce;
+    [SerializeField] private float fuerzaSalto = 17f;
+	[SerializeField] private float doubleJumpForce = 14.5f;
 
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>(); // obtenemos la ref. al rigidbody2D del PJ
-    }
-
-    void Update()
+    public void verifyJump()
     {
         // Detectamos si se presiona la tecla espacio y si el personaje esta tocando el suelo
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // Si toca el suelo
             if (EstaEnSuelo()){
-                Saltar();
+                Jump();
             }
             else if(!doubleJumpUsed){
-                DobleSalto();
+                DoubleJump();
             }
         }
 
@@ -45,7 +39,7 @@ public class CharacterJump : MonoBehaviour
     }
 
     /** Hace saltar al Jugador*/
-    public void Saltar()
+    public void Jump()
     {
         Debug.Log("Salto1");
         rb.velocity = new Vector2(rb.velocity.x, fuerzaSalto);
@@ -55,7 +49,7 @@ public class CharacterJump : MonoBehaviour
         // Reproducir audio
         ReproducirSalto();
     }
-    public void DobleSalto(){
+    public void DoubleJump(){
         Debug.Log("Salto2...");
         rb.velocity = new Vector2(rb.velocity.x, doubleJumpForce);
         
