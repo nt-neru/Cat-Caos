@@ -39,6 +39,13 @@ public class GameManager : MonoBehaviour
         Debug.Log("Puntos: "+puntosTotales);
         hud.ActualizarPuntos(puntosTotales);
     }
+    
+    public void ActualizarPunto(int puntosASumar)
+    {
+        puntosTotales += puntosASumar;
+        hud.ActualizarPuntos(puntosTotales);
+    }
+
 
     public void PerderVidas()
     {
@@ -73,5 +80,11 @@ public class GameManager : MonoBehaviour
     {
         nivel++;
         SceneManager.LoadScene(nivel);
+    }
+
+    public void Marcador()
+    {
+    
+        SceneManager.LoadScene("MarcadorPuntos");
     }
 }

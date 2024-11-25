@@ -25,8 +25,10 @@ using UnityEngine;
 
 public class CoinColicion : MonoBehaviour
 {
+    public static CoinColicion Instance { get; private set; }
     [SerializeField] private AudioClip sonidoMoneda;
     [SerializeField] private int valor = 1;
+    
 
     private bool flag = false; // Bandera para indicar si hubo una colisión
 
@@ -45,10 +47,14 @@ public class CoinColicion : MonoBehaviour
         {
             print("Colission!!!");
             AudioManager.instance.ReproducirSonido(sonidoMoneda);
-            GameManager.Instance.SumarPoints(valor);
+            ControladorPuntaje.Instance.SumarPuntaje(valor);
+           // GameManager.Instance.SumarPoints(valor);
             Destroy(this.gameObject);
 
             flag = false; // Resetear la bandera
         }
+
     }
+
+     
 }

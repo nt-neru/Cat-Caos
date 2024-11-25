@@ -8,7 +8,7 @@ public class HUD : MonoBehaviour
     [SerializeField] private TextMeshProUGUI puntos;
     [SerializeField] private GameObject[] vidas;
 
-    public void ActualizarPuntos(int puntosTotales)
+    public void ActualizarPuntos(float puntosTotales)
     {
         puntos.text = puntosTotales.ToString();
     }

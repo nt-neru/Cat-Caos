@@ -67,8 +67,18 @@ public class CharacterColiisionEnemy : MonoBehaviour
                 if (collisionCollider.CompareTag("LLegada"))
                 {
                     GameManager.Instance.CambioNivel();
+                    ControladorPuntaje.Instance.SumaPuntuacionLlegada();
                     print("Collision!!!");
                 }
+
+                if (collisionCollider.CompareTag("LLegadaa"))
+                {
+                    GameManager.Instance.Marcador();    
+                    ControladorPuntaje.Instance.SumaPuntuacionLlegada();      
+                    print("Collision!!!");
+                }
+              
+                
             }
 
             flag = false; // Resetear la bandera

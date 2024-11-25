@@ -335,6 +335,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moneda (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 6702148602221392929, guid: 0afcdeec3d3512d4c9e7566bccc1ebcf, type: 3}
+      propertyPath: cantidadPuntoss
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -396,6 +400,10 @@ PrefabInstance:
     - target: {fileID: 6673530057191180496, guid: 0afcdeec3d3512d4c9e7566bccc1ebcf, type: 3}
       propertyPath: m_Name
       value: Moneda (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6702148602221392929, guid: 0afcdeec3d3512d4c9e7566bccc1ebcf, type: 3}
+      propertyPath: cantidadPuntoss
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -469,6 +477,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3976261712342318848, guid: 0afcdeec3d3512d4c9e7566bccc1ebcf, type: 3}
   m_PrefabInstance: {fileID: 1663163420}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &294515889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 294515891}
+  - component: {fileID: 294515890}
+  m_Layer: 0
+  m_Name: ControladorPuntaje
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &294515890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294515889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8604a324da11831419408274f244dcd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CantidadPuntos: 0
+  text1: {fileID: 0}
+  arreglo: []
+--- !u!4 &294515891
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294515889}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.880022, y: 11.87164, z: -5.6575923}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &382450699 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3976261712342318848, guid: 0afcdeec3d3512d4c9e7566bccc1ebcf, type: 3}
@@ -735,6 +790,10 @@ PrefabInstance:
     - target: {fileID: 6673530057191180496, guid: 0afcdeec3d3512d4c9e7566bccc1ebcf, type: 3}
       propertyPath: m_Name
       value: Moneda (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6702148602221392929, guid: 0afcdeec3d3512d4c9e7566bccc1ebcf, type: 3}
+      propertyPath: cantidadPuntoss
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1480,7 +1539,7 @@ Tilemap:
       m_TileIndex: 1
       m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
+      m_TileColorIndex: 1
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741827
@@ -1519,10 +1578,10 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
+  - m_RefCount: 0
+    m_Data: {r: 4.0332e-41, g: 4.0332e-41, b: 4.0332e-41, a: 4.0332e-41}
   - m_RefCount: 1
     m_Data: {r: 0.8808172, g: 0.5209311, b: 0.5438623, a: 1}
-  - m_RefCount: 0
-    m_Data: {r: 7.18e-41, g: 7.18e-41, b: 7.18e-41, a: 7.18e-41}
   - m_RefCount: 37
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
@@ -16596,6 +16655,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moneda (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 6702148602221392929, guid: 0afcdeec3d3512d4c9e7566bccc1ebcf, type: 3}
+      propertyPath: cantidadPuntoss
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17373,6 +17436,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moneda (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 6702148602221392929, guid: 0afcdeec3d3512d4c9e7566bccc1ebcf, type: 3}
+      propertyPath: cantidadPuntoss
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17477,6 +17544,10 @@ PrefabInstance:
     - target: {fileID: 6673530057191180496, guid: 0afcdeec3d3512d4c9e7566bccc1ebcf, type: 3}
       propertyPath: m_Name
       value: Moneda (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6702148602221392929, guid: 0afcdeec3d3512d4c9e7566bccc1ebcf, type: 3}
+      propertyPath: cantidadPuntoss
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18227,6 +18298,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moneda (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6702148602221392929, guid: 0afcdeec3d3512d4c9e7566bccc1ebcf, type: 3}
+      propertyPath: cantidadPuntoss
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18553,6 +18628,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moneda (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 6702148602221392929, guid: 0afcdeec3d3512d4c9e7566bccc1ebcf, type: 3}
+      propertyPath: cantidadPuntoss
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18620,6 +18699,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moneda
       objectReference: {fileID: 0}
+    - target: {fileID: 6702148602221392929, guid: 0afcdeec3d3512d4c9e7566bccc1ebcf, type: 3}
+      propertyPath: Puntaje1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6702148602221392929, guid: 0afcdeec3d3512d4c9e7566bccc1ebcf, type: 3}
+      propertyPath: cantidadPuntoss
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18639,3 +18726,4 @@ SceneRoots:
   - {fileID: 957448967}
   - {fileID: 809281201}
   - {fileID: 275510153}
+  - {fileID: 294515891}
