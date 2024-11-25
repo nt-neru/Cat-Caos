@@ -74,11 +74,5 @@ public class GameManager : MonoBehaviour
         nivel--;
         SceneManager.LoadScene(nivel);
     }
-    void Volver ()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene("Inicio");
-        }
-    }
+   
 }
