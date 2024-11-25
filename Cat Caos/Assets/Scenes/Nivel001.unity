@@ -415,6 +415,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6049442321786650035, guid: 9f09bc94eda827440a604f58eb56b054, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6049442321786650035, guid: 9f09bc94eda827440a604f58eb56b054, type: 3}
+      propertyPath: <SceneId>k__BackingField
+      value: 4148819453
+      objectReference: {fileID: 0}
     - target: {fileID: 269823587805095691, guid: 9f09bc94eda827440a604f58eb56b054, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.5
@@ -1480,7 +1488,7 @@ Tilemap:
       m_TileIndex: 1
       m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
+      m_TileColorIndex: 1
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741827
@@ -1519,10 +1527,10 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
+  - m_RefCount: 0
+    m_Data: {r: 4.916e-41, g: 4.916e-41, b: 4.916e-41, a: 4.916e-41}
   - m_RefCount: 1
     m_Data: {r: 0.8808172, g: 0.5209311, b: 0.5438623, a: 1}
-  - m_RefCount: 0
-    m_Data: {r: 7.18e-41, g: 7.18e-41, b: 7.18e-41, a: 7.18e-41}
   - m_RefCount: 37
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []

@@ -71,7 +71,8 @@ public class GameManager : MonoBehaviour
     }
     public void CambioNivel()
     {
-        nivel++;
+        nivel--;
         SceneManager.LoadScene(nivel);
     }
+   
 }
