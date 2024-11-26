@@ -12,8 +12,6 @@ public class GameManager : MonoBehaviour
     private int vidas = 3;
     private int nivel = 1;
 
-    public int PuntosTotales { get { return puntosTotales; } }
-    private int puntosTotales;
     void Awake()
     {
         if (Instance == null)
@@ -31,17 +29,6 @@ public class GameManager : MonoBehaviour
     public void DestruirSingleton()
     {
         Destroy(gameObject);
-    }
-
-    // public void SumarPoints(int puntosASumar)
-    // {
-    //     puntosTotales += puntosASumar;
-    //     Debug.Log("Puntos: "+puntosTotales);
-    //     hud.ActualizarPuntos(puntosTotales);
-    // }
-     public void ActualizarPunto(int puntosASumar)
-    {
-        hud.ActualizarPuntos(puntosASumar);
     }
 
     public void PerderVidas()
@@ -80,7 +67,6 @@ public class GameManager : MonoBehaviour
     }
     public void Marcador()
     {
-    
         SceneManager.LoadScene("MarcadorPuntos");
     }
    

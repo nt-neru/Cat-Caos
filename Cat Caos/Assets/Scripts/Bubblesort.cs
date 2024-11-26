@@ -7,9 +7,8 @@ public class Bubblesort : MonoBehaviour
 {
     // public float[] arrayToSort;
     public static Bubblesort Instance { get; private set; }
-    public TextMeshProUGUI texto1;
-    public TextMeshProUGUI texto2;
-    [SerializeField] private int Monedas;
+    public TextMeshProUGUI puntuacion;
+    public TextMeshProUGUI cantMonedas;
     public float[] arreglo;
 
     private void Awake(){
@@ -24,25 +23,20 @@ public class Bubblesort : MonoBehaviour
             Destroy(gameObject);
         }
     }
-   
-    // Start is called before the first frame update
 
-    
     private void Start()
     {
         arreglo= new float[2];
         MostrarBubbleSort();
     }
-//envio mi arreglo y traigo los valores que tienen, luego los muestro en pantalla
+    //envio mi arreglo y traigo los valores que tienen, luego los muestro en pantalla
     public void MostrarBubbleSort()
     {
         ControladorPuntaje.Instance.Puntuaciones(arreglo);
-        ControladorPuntaje.Instance.MonedasRecogidas(Monedas);
-        texto2.text += " " + Monedas;
-        Debug.Log("monedass333: "+ Monedas);
+        ControladorPuntaje.Instance.MonedasRecogidas();
         for (int i = 0; i < 1; ++i)
         {
-            texto1.text += " " + arreglo[i];       
+            puntuacion.text += " " + arreglo[i];
         }
         //luego ocupar ValoresBubblesort 
     }
@@ -50,7 +44,6 @@ public class Bubblesort : MonoBehaviour
     /*Genera valores aleatorio y actualiza a text1*/
     public void ValoresBubblesort(float[] array)
     {
- 
         int n= array.Length;
         for(int i= 0; i<= n-2;i++){
             for(int j= 0; j<= n-i-2;j++){

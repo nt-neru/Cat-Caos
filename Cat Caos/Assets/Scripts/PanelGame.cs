@@ -14,7 +14,7 @@ public class PanelGame : MonoBehaviour
     [SerializeField] private TextMeshProUGUI puntos;
 
     void Start(){
-        int punto = GameManager.Instance.PuntosTotales;
+        int punto = ControladorPuntaje.Instance.PuntosTotales;
         puntos.text = "Recogiste: " + punto.ToString()+"puntos";
     }
 
