@@ -27,7 +27,7 @@ public class ControladorPuntaje : MonoBehaviour
     // Sumar Puntajes y los guardo en cantidad de puntos
     public void SumarPuntaje(int puntos){
         CantidadPuntos += puntos ; 
-        hud.ActualizarPuntos(CantidadPuntos);
+       // hud.ActualizarPuntos(CantidadPuntos);
         Debug.Log("Puntoss: "+ CantidadPuntos);
     }
 
