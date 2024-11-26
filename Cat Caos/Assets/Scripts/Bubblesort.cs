@@ -8,7 +8,8 @@ public class Bubblesort : MonoBehaviour
     // public float[] arrayToSort;
     public static Bubblesort Instance { get; private set; }
     public TextMeshProUGUI texto1;
-   // public TextMeshProUGUI texto2;
+    public TextMeshProUGUI texto2;
+    public int Monedas = 0;
     public float[] arreglo;
 
 
@@ -25,9 +26,11 @@ public class Bubblesort : MonoBehaviour
     public void MostrarBubbleSort()
     {
         ControladorPuntaje.Instance.Puntuaciones(arreglo);
-        for (int i = 0; i < 2; ++i)
+        ControladorPuntaje.Instance.MonedasRecogidas(Monedas);
+        texto2.text += " " + Monedas;
+        for (int i = 0; i < 1; ++i)
         {
-            texto1.text += " " + arreglo[i];
+            texto1.text += " " + arreglo[i];       
         }
         //luego ocupar ValoresBubblesort 
     }

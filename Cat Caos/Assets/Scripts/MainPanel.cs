@@ -46,7 +46,10 @@ public class MainPanel : MonoBehaviour
     {
         fxSourse.PlayOneShot(ClickSound);
     }
-
+    public void Inicio(string level)
+    {
+        SceneManager.LoadScene(level);
+    }
     public void PlayLevel(string level)
     {
         SceneManager.LoadScene(level);

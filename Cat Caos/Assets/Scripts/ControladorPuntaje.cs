@@ -8,7 +8,7 @@ public class ControladorPuntaje : MonoBehaviour
     public static ControladorPuntaje Instance { get; private set; }
    [SerializeField] private int CantidadPuntos;
     public float[] arreglo;
-
+    public HUD hud;
     private void Awake(){
         arreglo= new float[2]; 
 
@@ -24,7 +24,8 @@ public class ControladorPuntaje : MonoBehaviour
     // Sumar Puntajes y los guardo en cantidad de puntos
     public void SumarPuntaje(int puntos){
         CantidadPuntos += puntos ; 
-        GameManager.Instance.ActualizarPunto(puntos);
+        GameManager.Instance.ActualizarPunto(CantidadPuntos);
+        Debug.Log("Puntoss: "+ CantidadPuntos);
     }
 
    //cuando los pj llegan a la meta sumo los puntos y los agrego al arreglo
@@ -46,6 +47,10 @@ public class ControladorPuntaje : MonoBehaviour
             Debug.Log("puntosplayer: "+ CantidadPuntos);
         }
 
+ }
+ public void MonedasRecogidas(float moneda)
+ {
+    moneda = CantidadPuntos;
  }
 
 }

@@ -33,11 +33,15 @@ public class GameManager : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void SumarPoints(int puntosASumar)
+    // public void SumarPoints(int puntosASumar)
+    // {
+    //     puntosTotales += puntosASumar;
+    //     Debug.Log("Puntos: "+puntosTotales);
+    //     hud.ActualizarPuntos(puntosTotales);
+    // }
+     public void ActualizarPunto(int puntosASumar)
     {
-        puntosTotales += puntosASumar;
-        Debug.Log("Puntos: "+puntosTotales);
-        hud.ActualizarPuntos(puntosTotales);
+        hud.ActualizarPuntos(puntosASumar);
     }
 
     public void PerderVidas()
@@ -73,6 +77,11 @@ public class GameManager : MonoBehaviour
     {
         nivel--;
         SceneManager.LoadScene(nivel);
+    }
+    public void Marcador()
+    {
+    
+        SceneManager.LoadScene("MarcadorPuntos");
     }
    
 }
