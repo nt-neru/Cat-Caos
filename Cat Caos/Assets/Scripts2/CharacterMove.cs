@@ -28,7 +28,7 @@ public class CharacterMove : Character, IMovable
     {
         rb.velocity = new Vector2(moveX * velocidad , rb.velocity.y);
         gestionarDireccion(moveX);
-        LimitarMovimientoEnPantalla();
+       // LimitarMovimientoEnPantalla();
     }
     public void gestionarDireccion(float moveX)
     {
