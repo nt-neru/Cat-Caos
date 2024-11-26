@@ -17458,7 +17458,7 @@ MonoBehaviour:
   CantidadPuntos: 0
   arreglo: []
   arreglomoneda: []
-  hud: {fileID: 0}
+  hud: {fileID: 1969610069}
 --- !u!4 &1667904979
 Transform:
   m_ObjectHideFlags: 0

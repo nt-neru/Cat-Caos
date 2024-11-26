@@ -27,5 +27,6 @@ public class PanelGame : MonoBehaviour
     {
         SceneManager.LoadScene(level);
         GameManager.Instance.DestruirSingleton();
+        ControladorPuntaje.Instance.DestruirSingleton();
     }
 }

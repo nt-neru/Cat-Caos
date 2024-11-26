@@ -11,23 +11,23 @@ public class ControladorPuntaje : MonoBehaviour
     public int PuntosTotales { get { return CantidadPuntos; } }
     public float[] arreglo;
     public float[] arreglomoneda;
-    public HUD hud;
+    [SerializeField] private HUD hud;
     private void Awake(){
         arreglo= new float[2]; 
 
-        if(ControladorPuntaje.Instance == null)
+        if (Instance == null)
         {
-            ControladorPuntaje.Instance = this;
+            Instance = this;
             DontDestroyOnLoad(this.gameObject);
-        } 
+        }
         else {
-            Destroy(gameObject);
+            DestruirSingleton();
         }
     }
     // Sumar Puntajes y los guardo en cantidad de puntos
     public void SumarPuntaje(int puntos){
         CantidadPuntos += puntos ; 
-       // hud.ActualizarPuntos(CantidadPuntos);
+        hud.ActualizarPuntos(CantidadPuntos);
         Debug.Log("Puntoss: "+ CantidadPuntos);
     }
 
@@ -46,13 +46,16 @@ public class ControladorPuntaje : MonoBehaviour
         {
             array[i] = arreglo[i];
             Debug.Log("Puntos2: "+ arreglo[i]);
-            Debug.Log("puntosplayer: "+ CantidadPuntos);
+            Debug.Log("puntosplayer: "+ PuntosTotales);
         }
 
  }
  public void MonedasRecogidas()
  {
-    Debug.Log("monedas: "+ CantidadPuntos);
+    Debug.Log("monedas: "+ PuntosTotales);
+ }
+ public void DestruirSingleton(){
+    Destroy(gameObject);
  }
 
 }

@@ -37,6 +37,7 @@ public class Bubblesort : MonoBehaviour
         for (int i = 0; i < 1; ++i)
         {
             puntuacion.text += " " + arreglo[i];
+            cantMonedas.text = ControladorPuntaje.Instance.PuntosTotales.ToString();
         }
         //luego ocupar ValoresBubblesort 
     }
