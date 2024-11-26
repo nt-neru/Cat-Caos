@@ -15,6 +15,7 @@ public class CharacterCollision : MonoBehaviour
         collisionHandlers.Add("Espina", new EspinaCollision());
         collisionHandlers.Add("Vacio", new VacioCollision());
         collisionHandlers.Add("LLegada", new LlegadaCollision());
+        collisionHandlers.Add("LLegada2", new LlegadaCollision2());
     }
 
     public void OnTriggerEnter2D(Collider2D other)
