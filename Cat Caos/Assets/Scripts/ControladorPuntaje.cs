@@ -8,6 +8,7 @@ public class ControladorPuntaje : MonoBehaviour
     public static ControladorPuntaje Instance { get; private set; }
    [SerializeField] private int CantidadPuntos;
     public float[] arreglo;
+    public float[] arreglomoneda;
     public HUD hud;
     private void Awake(){
         arreglo= new float[2]; 
@@ -48,9 +49,11 @@ public class ControladorPuntaje : MonoBehaviour
         }
 
  }
- public void MonedasRecogidas(float moneda)
+ public void MonedasRecogidas(float Monedas)
  {
-    moneda = CantidadPuntos;
+    Monedas = CantidadPuntos;
+    Debug.Log("monedas: "+ CantidadPuntos);
+    Debug.Log("monedasss: "+ Monedas);
  }
 
 }

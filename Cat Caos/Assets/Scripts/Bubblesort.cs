@@ -9,10 +9,21 @@ public class Bubblesort : MonoBehaviour
     public static Bubblesort Instance { get; private set; }
     public TextMeshProUGUI texto1;
     public TextMeshProUGUI texto2;
-    public int Monedas = 0;
+    [SerializeField] private int Monedas;
     public float[] arreglo;
 
+    private void Awake(){
+      //  arreglo= new float[2]; 
 
+        if(Bubblesort.Instance == null)
+        {
+            Bubblesort.Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        } 
+        else {
+            Destroy(gameObject);
+        }
+    }
    
     // Start is called before the first frame update
 
@@ -28,6 +39,7 @@ public class Bubblesort : MonoBehaviour
         ControladorPuntaje.Instance.Puntuaciones(arreglo);
         ControladorPuntaje.Instance.MonedasRecogidas(Monedas);
         texto2.text += " " + Monedas;
+        Debug.Log("monedass333: "+ Monedas);
         for (int i = 0; i < 1; ++i)
         {
             texto1.text += " " + arreglo[i];       

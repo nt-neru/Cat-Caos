@@ -796,6 +796,7 @@ GameObject:
   - component: {fileID: 357372524}
   - component: {fileID: 357372523}
   - component: {fileID: 357372522}
+  - component: {fileID: 357372526}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -907,6 +908,20 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &357372526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357372520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 679191522b661e442b9ace2205903862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puntos: {fileID: 803602732}
+  vidas: []
 --- !u!1 &367190667
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,7 +1008,6 @@ GameObject:
   - component: {fileID: 376417787}
   - component: {fileID: 376417790}
   - component: {fileID: 376417789}
-  - component: {fileID: 376417788}
   m_Layer: 5
   m_Name: PuntMonTex
   m_TagString: Untagged
@@ -1021,18 +1035,6 @@ RectTransform:
   m_AnchoredPosition: {x: -55, y: 1}
   m_SizeDelta: {x: 223.6699, y: 50}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &376417788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 376417786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18f1c7f9ecd1e574eb18537963a6bb90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &376417789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1901,8 +1903,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 168, y: -1}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 159, y: -4}
+  m_SizeDelta: {x: 130.8599, y: 43.4773}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &803602732
 MonoBehaviour:
@@ -1951,8 +1953,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 27
+  m_fontSizeBase: 27
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3181,7 +3183,6 @@ GameObject:
   - component: {fileID: 1994336438}
   - component: {fileID: 1994336441}
   - component: {fileID: 1994336440}
-  - component: {fileID: 1994336442}
   m_Layer: 5
   m_Name: PuntTex
   m_TagString: Untagged
@@ -3306,18 +3307,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994336437}
   m_CullTransparentMesh: 1
---- !u!114 &1994336442
+--- !u!1 &2028012642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2028012643}
+  - component: {fileID: 2028012644}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2028012643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028012642}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2028012644
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994336437}
+  m_GameObject: {fileID: 2028012642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18f1c7f9ecd1e574eb18537963a6bb90, type: 3}
+  m_Script: {fileID: 11500000, guid: 6628d62b04f48544b828d2e14c9c81a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hud: {fileID: 357372526}
+  sonidoMuerteJugador: {fileID: 8300000, guid: 8587535f806d6e64b8c09c458f7ef236, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3326,3 +3361,4 @@ SceneRoots:
   - {fileID: 1747261087}
   - {fileID: 1411796415}
   - {fileID: 767504422}
+  - {fileID: 2028012643}
