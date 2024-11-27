@@ -12,7 +12,6 @@ public class Bubblesort : MonoBehaviour
     public float[] arreglo;
 
     private void Awake(){
-      //  arreglo= new float[2]; 
 
         if(Bubblesort.Instance == null)
         {
@@ -42,7 +41,7 @@ public class Bubblesort : MonoBehaviour
         //luego ocupar ValoresBubblesort 
     }
 
-    /*Genera valores aleatorio y actualiza a text1*/
+     /*Genera valores aleatorio y actualizara a futuro text1/text2*/
     public void ValoresBubblesort(float[] array)
     {
         int n= array.Length;

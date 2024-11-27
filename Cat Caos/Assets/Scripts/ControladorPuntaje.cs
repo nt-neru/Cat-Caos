@@ -58,6 +58,3 @@ public class ControladorPuntaje : MonoBehaviour
  }
 
 }
-
-//cambiar el sumarpuntaje ya que lo tiene el manager 
-    
