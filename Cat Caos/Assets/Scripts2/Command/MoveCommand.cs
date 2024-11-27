@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class MoveCommand : ICommand
 {
-    private CharacterMove characterMove;
+    private IMovable moveable;
     private float moveX;
 
     // Constructor de la clase
-    public MoveCommand(CharacterMove characterMove, float moveX)
+    public MoveCommand(IMovable moveable, float moveX)
     {
-        this.characterMove = characterMove;
+        this.moveable = moveable;
         this.moveX = moveX;
     }
 
     // Ejecutando el comando del personaje
     public void Execute(){
-        this.characterMove.Move(this.moveX);
+        this.moveable.Move(this.moveX);
     }
 }

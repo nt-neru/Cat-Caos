@@ -268,10 +268,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e08c40af5894dfd478dc520726762623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 0}
+  _networkObjectCache: {fileID: 0}
   spaceKey: 32
   scriptMove: {fileID: 2622283974887766003}
   scriptJump: {fileID: 2220678331977732693}
   scriptAnimation: {fileID: 6169519731789908830}
+  networkManager: {fileID: 0}
 --- !u!1 &8938121846213566866
 GameObject:
   m_ObjectHideFlags: 0
