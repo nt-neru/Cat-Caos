@@ -33,7 +33,7 @@ public class Bubblesort : MonoBehaviour
     public void MostrarBubbleSort()
     {
         ControladorPuntaje.Instance.Puntuaciones(arreglo);
-        ControladorPuntaje.Instance.MonedasRecogidas();
+       // ControladorPuntaje.Instance.MonedasRecogidas();
         for (int i = 0; i < 1; ++i)
         {
             puntuacion.text += " " + arreglo[i];
@@ -58,4 +58,9 @@ public class Bubblesort : MonoBehaviour
             }
         }  
     }
+
+    public void DestruirSingleton(){
+    Destroy(gameObject);
+ }
+    
 }

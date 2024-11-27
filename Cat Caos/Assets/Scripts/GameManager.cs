@@ -68,7 +68,8 @@ public class GameManager : MonoBehaviour
     public void Marcador()
     {
         hud.DesactivarHUD();
-        SceneManager.LoadScene("MarcadorPuntos");
+       // SceneManager.LoadScene("MarcadorPuntos");
+        SceneManager.LoadScene("MarcadorPuntosSingle");
     }
    
 }

@@ -10,7 +10,6 @@ public class ControladorPuntaje : MonoBehaviour
    
     public int PuntosTotales { get { return CantidadPuntos; } }
     public float[] arreglo;
-    public float[] arreglomoneda;
     [SerializeField] private HUD hud;
     private void Awake(){
         arreglo= new float[2]; 
@@ -42,7 +41,7 @@ public class ControladorPuntaje : MonoBehaviour
 //recibo un arreglo y lo hago igual al arreglo que tengo de las puntuaciones 
  public void Puntuaciones(float[] array){
   
-    for (int i = 0; i < 2; ++i)
+    for (int i = 0; i < 1; ++i)
         {
             array[i] = arreglo[i];
             Debug.Log("Puntos2: "+ arreglo[i]);
@@ -50,10 +49,10 @@ public class ControladorPuntaje : MonoBehaviour
         }
 
  }
- public void MonedasRecogidas()
- {
-    Debug.Log("monedas: "+ PuntosTotales);
- }
+//  public void MonedasRecogidas()
+//  {
+//     Debug.Log("monedas: "+ PuntosTotales);
+//  }
  public void DestruirSingleton(){
     Destroy(gameObject);
  }
