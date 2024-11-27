@@ -6,7 +6,7 @@ public class LlegadaCollision2 : ICollision
 {
     public void HandleCollision (Collider2D other)
     {
-        GameManager.Instance.Marcador();
+        GameManager.Instance.Marcador2();
         ControladorPuntaje.Instance.SumaPuntuacionLlegada();
     }
 }

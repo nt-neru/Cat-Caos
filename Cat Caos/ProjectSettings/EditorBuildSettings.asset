@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MarcadorPuntosSingle.unity
     guid: 702a24171bde0a54f8481aed4d9210bc
+  - enabled: 1
+    path: Assets/Scenes/MarcadorPuntosMulti.unity
+    guid: 6949ce72c3ec99b4088e5a18e66e46ef
   m_configObjects: {}
